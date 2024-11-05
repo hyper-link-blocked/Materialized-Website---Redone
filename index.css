@@ -17,6 +17,6 @@ body {
     margin-bottom: 1.5em;
 }
 
-.active {
+.current {
     background-color: #d50000;
 }
