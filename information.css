@@ -2,7 +2,7 @@
     margin-top: 2em;
 }
 
-.img1, .re-iframe {
+.img1, .video-container {
 
     margin: .25em;
     border: 2px solid #f00;
@@ -65,19 +65,3 @@ section li {
     margin-top: 1em;
 }
 
-.re-iframe {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (315/560 = 0.5625 = 56.25%) */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-/* Style for iframe to make it fill the container */
-.re-iframe iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
