@@ -16,3 +16,7 @@ body {
 .slider {
     margin-bottom: 1.5em;
 }
+
+.active {
+    background-color: #d50000;
+}

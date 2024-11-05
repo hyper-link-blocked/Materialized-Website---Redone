@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami Mindscape</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet" href="faq.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.sidenav').sidenav();
+        });
+
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#!" class="brand-logo"><img src="images/logo.png" alt="" height="60"></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="information.html">INFORMATION</a></li>
+                <li><a class="active" href="faq.html">FAQ</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul class="sidenav black" id="mobile-demo">
+        <li><a class="white-text" href="index.html">HOME</a></li>
+        <li><a class="white-text" href="information.html">INFORMATION</a></li>
+        <li><a class="white-text active" href="faq.html">FAQ</a></li>
+        <li><a class="white-text" href="about.html">ABOUT</a></li>
+        <li><a class="white-text" href="contact.html">CONTACT</a></li>
+    </ul>
+
+    <div class="container black" style="margin-top: 5em;">
+
+        <h2 class="red-text text-accent-4 center-align">FAQ Questions</h2>
+        <p class="white-text center-align">Here's a database of some of our most common questions. <br>If you have a question that isn't listed here, feel free to contact us and ask!</p>
+
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col s8 offset-s2 black">
+
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header black red-text text-accent-4"><i class="material-icons">help_outline</i>What Is VR?</div>
+                        <div class="collapsible-body white-text"><span>VR, or Virtual Reality, is a computer-simulated environment that allows users to move in and interact with different virtual objects through the use of controllers or hand tracking. Users can experience many different simulations and even program their own. Through the use of a headset with two screens in front of the eyes, users can see the simulation as if they were actively standing in it, making it feel like they're truly immersed in the virtual world.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header black red-text text-accent-4"><i class="material-icons">devices_other</i>What Are The Differences Between VR and AR?</div>
+                        <div class="collapsible-body white-text"><span>VR and AR are similar, yet very different. AR, meaning Augmented Reality, uses only small virtual elements to enhance the user's experiences, allowing them to interact with both real and virtual objects. A good example of AR is the Apple Vision Pro. While it looks like a standard VR headset, it has a clear front display and projectors built in that display virtual menus onto the glass, allowing users to see both the real world and virtual objects.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header black red-text text-accent-4"><i class="material-icons">report</i>Are There Any Safety Issues?</div>
+                        <div class="collapsible-body white-text"><span>There are a fair amount of safety and/or health concerns with VR. The most prominent one is physical harm. When you can't see your surroundings in the real world, you're bound to hit something. Other concerns are eye strain and motion sickness, as well as more psychological risks like stress or fear that could be caused by certain simulations.</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header black red-text text-accent-4"><i class="material-icons">videogame_asset</i>Is VR Only For Gaming?</div>
+                        <div class="collapsible-body white-text"><span>Not at all. VR has many applications outside of the video game industry. Many hospitals use virtual reality to train staff, as well as help patients relax. It's also used in the automotive industry to build engines in VR, so you can learn how they work. Many different industries use virtual reality in order to either accelerate their processes or to do things that previously weren't possible.<br><br>
+                                (Take a look at what <a href="https://historicvr.com">Historic VR</a> has done with the medium).</span></div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header black red-text text-accent-4"><i class="material-icons">info_outline</i>What Are The Benefits Of VR?</div>
+                        <div class="collapsible-body white-text"><span>There are many different benefits to VR. They range from improved collaboration and learning to more cost-effective methods and higher training retention. Its most effective field is training people to do complicated or expensive tasks, where they can simulate different scenarios for far less money in a virtual space instead of the real world.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer black">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="red-text text-accent-4">Footer Content</h5>
+                    <p class="white-text">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="red-text text-accent-4">Links</h5>
+                    <ul>
+                        <li><a class="white-text" href="#!">Link 1</a></li>
+                        <li><a class="white-text" href="#!">Link 2</a></li>
+                        <li><a class="white-text" href="#!">Link 3</a></li>
+                        <li><a class="white-text" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container red-text text-accent-4">
+                © 2014 Copyright Text
+                <a class="white-text right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+</body></html>
