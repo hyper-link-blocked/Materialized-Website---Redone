@@ -15,10 +15,7 @@
 
 .info,
 .info2 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
-    color: #fff;
-
-
+    background-color: black;
     margin-top: 8em;
     color: #fff;
     position: relative;
@@ -31,14 +28,12 @@
 }
 
 section {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%);
-    color: #fff;
-
+    background-color: black;
     margin-top: 3em;
     color: #fff;
     position: relative;
     padding: 0.5em;
-    text-align: center
+    text-align: center;
 }
 
 section h2 {

@@ -1,0 +1,14 @@
+.with-header li {
+    color: white;
+}
+
+
+
+
+.with-header .collection-header {
+    border-top: none;
+}
+
+.card {
+    border: 2px solid #db1000;
+}
