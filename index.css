@@ -12,10 +12,15 @@ body {
     flex: 1 0 auto;
   }
 
-.slider {
-    margin-bottom: 1.5em;
-}
+/* .slider {
+    margin-bottom: 5em;
+} */
 
 .current {
     background-color: #d50000;
+}
+
+.col, .container {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
