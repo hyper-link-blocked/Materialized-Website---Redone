@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
     <link rel="stylesheet" href="index.css">
-    
+
     <link rel="stylesheet" href="contact.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -22,7 +22,7 @@
             $('.sidenav').sidenav();
         });
 
-          $(document).ready(function() {
+        $(document).ready(function() {
             $('.datepicker').datepicker();
         });
     </script>
@@ -33,7 +33,9 @@
 
     <nav id="top">
         <div class="nav-wrapper black">
-            <a href="index.html" class="brand-logo"><p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p></a>
+            <a href="index.html" class="brand-logo">
+                <p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">HOME</a></li>
@@ -52,12 +54,16 @@
         <li><a class="white-text" href="about.html">ABOUT</a></li>
         <li><a class="white-text current" href="contact.html">CONTACT</a></li>
     </ul>
-    
-        
-   <section id="contact" class="section section-contact scrollspy">
+
+
+    <section id="contact" class="section section-contact scrollspy">
+        <div class="container black" style="padding: 0 1em 1px">
+            <div></div>
+            <h1 class="red-text text-accent-4 center">Contact Us</h1>
+            <p class="white-text center-align">We are always open to answering queries that are not brought up on our website. <br>Reach out to us with your burning questions, and we'll get back as soon as possible.</p>
+        </div>
         <div class="container black">
             <div class="row">
-                <h2 class="red-text text-accent-4 center">Contact Us</h2>
                 <form action="https://formsubmit.co/phippsec@miamioh.edu" method="POST" class="col s12">
                     <div class="row">
                         <div class="input-field col s6">
@@ -93,28 +99,26 @@
     </section>
     <section>
         <div class="container ">
-             <div class="row">
-                 <div class="col s10 offset-s1 black">
-                     
-                 
-              <h3 class="red accent-4 white-text center">Where We Are Located</h3>
-               <div class="row black" style="padding: 0 1em 1em 1em">
-                <div class="video-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.254362009324!2d-84.73706642403364!3d39.508748471599915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884022c4d025ec71%3A0xfce7a4ae2c12bf0f!2sMiami%20University!5e0!3m2!1sen!2sus!4v1727965486860!5m2!1sen!2sus" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="row">
+                <div class="col s12 black">
+                    <h1 class="red accent-4 white-text center">Where We Are Located</h1>
+                    <div class="row black" style="padding: 0 1em 1em 1em">
+                        <div class="video-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3078.254362009324!2d-84.73706642403364!3d39.508748471599915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x884022c4d025ec71%3A0xfce7a4ae2c12bf0f!2sMiami%20University!5e0!3m2!1sen!2sus!4v1727965486860!5m2!1sen!2sus" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                </div>
-             </div>
             </div>
+        </div>
     </section>
-    
+
     <footer class="page-footer black">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 red accent-4">
                     <ul class="collection with-header">
                         <li class="collection-header black">
-                           <!-- I used collections as my CSS component-->
+                            <!-- I used collections as my CSS component-->
                             <h4 class="red-text text-accent-4">Contributors</h4>
                         </li>
                         <li class="collection-item black">Brown, Conner</li>
@@ -129,7 +133,7 @@
                     <h5 class="red-text text-accent-4">Tired of Scrolling?</h5>
                     <ul>
                         <li><a class="white-text" href="#top">Back to Top</a></li>
-            
+
                     </ul>
                 </div>
             </div>
