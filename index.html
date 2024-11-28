@@ -28,6 +28,48 @@
                 interval: 5000
             });
         });
+
+        $(document).ready(function() {
+            $('select').formSelect();
+        });
+
+    </script>
+
+    <script>
+        function calculate() {
+
+            let customers = parseInt(document.getElementById("customers").value);
+            let retention = parseFloat(document.getElementById("retention").value);
+            let plan = parseFloat(document.getElementById("plan").value);
+            let start = parseInt(document.getElementById("start").value);
+            let price = 0;
+            let years = 0;
+            let loyals = 0;
+            let estimate = 0;
+            let sub = 0;
+            alert(customers);
+
+            years = 2024 - start;
+
+            loyals = customers * retention * years;
+
+            estimate = loyals * plan + loyals;
+
+            if (plan == 0.1) {
+                sub = "Basic";
+                price = 10000;
+            } else if (plan == 0.2) {
+                sub = "Standard";
+                price = 20000;
+            } else {
+                sub = "VIP";
+                price = 30000;
+            }
+
+            document.getElementById("textarea1").value = "You have roughly " + loyals + " loyal customers from your " + years + " years of service. We predict those numbers increasing to " + estimate + " with the use of our " + sub + " services. Starting at only " + "$" + price + " anually!";
+
+
+        }
     </script>
 
 </head>
@@ -36,7 +78,9 @@
 
     <nav id="top">
         <div class="nav-wrapper black">
-            <a href="index.html" class="brand-logo"><p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p></a>
+            <a href="index.html" class="brand-logo">
+                <p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a class="current" href="index.html">HOME</a></li>
@@ -107,28 +151,64 @@
                         <p class="">Don't have an account?<br>
                             <a href="#">Sign Up Here</a>
                             <p />
-                        <p class="">Log in with</p>
-                        <div class="icons">
-
-                            <a href="#">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                            </a>
-                            <a href="#">
-                                <ion-icon name="logo-instagram"></ion-icon>
-                            </a>
-                            <a href="#">
-                                <ion-icon name="logo-twitter"></ion-icon>
-                            </a>
-                            <a href="#">
-                                <ion-icon name="logo-google"></ion-icon>
-                            </a>
-                            <a href="#">
-                                <ion-icon name="logo-skype"></ion-icon>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="input-field col s12">
+                <div class="input-field col s12">
+                    <input id="customers" type="text">
+                    <label for="email">Enter Yearly Customer Average</label>
+                </div>
+            </div>
+
+            <div class="input-field col s12">
+                <div class="input-field col s12">
+                    <input id="start" type="text">
+                    <label for="start">Enter Year of Company's Start</label>
+                </div>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="retention">
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="0.05">5%</option>
+                    <option value="0.1">10%</option>
+                    <option value="0.2">20%</option>
+                    <option value="0.4">40%</option>
+                    <option value="0.6">60%</option>
+                    <option value="0.8">80%</option>
+                    <option value="1">100%</option>
+                </select>
+                <label>Select Average New Customer Retention Rate</label>
+            </div>
+
+            <div class="input-field col s12">
+                <select id="plan">
+                    <option value="" disabled selected>Select an Option</option>
+                    <option value="0.1">Basic</option>
+                    <option value="0.2">General</option>
+                    <option value="0.4">Advanced</option>
+                </select>
+                <label>Select Subscription Type</label>
+            </div>
+
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <textarea disabled id="textarea1" class="materialize-textarea black-text" style="height: 100px;"></textarea>
+                            <label for="textarea1"></label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <input type="button" id="calculate" value="Calculate" onclick="calculate()">
+
         </div>
     </section>
     <footer class="page-footer black">
@@ -137,7 +217,7 @@
                 <div class="col l6 s12 red accent-4">
                     <ul class="collection with-header">
                         <li class="collection-header black">
-                           <!-- I used collections as my CSS component-->
+                            <!-- I used collections as my CSS component-->
                             <h4 class="red-text text-accent-4">Contributors</h4>
                         </li>
                         <li class="collection-item black">Brown, Conner</li>
