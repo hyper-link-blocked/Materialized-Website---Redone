@@ -47,12 +47,20 @@
             let loyals = 0;
             let estimate = 0;
             let sub = 0;
+            let date = new Date().getFullYear();
+            
+            if (customers < 0 || isNaN(customers) || start > date || isNaN(start)) {
+                alert("Please enter valid answers into the prompts");
+                return;
+            } else {
+                //continue script
+            }
 
-            years = new Date().getFullYear() - start;
+            years = date - start;
 
-            loyals = customers * retention * years;
+            loyals = parseInt(customers * retention * years);
 
-            estimate = loyals * plan + loyals;
+            estimate = parseInt(loyals * plan + loyals);
 
             if (plan == 0.1) {
                 sub = "Basic";
@@ -160,7 +168,7 @@
             <div class="input-field col s12">
                 <div class="input-field col s12">
                     <input id="customers" type="text">
-                    <label for="email">Enter Yearly Customer Average</label>
+                    <label for="email">Enter New Customer Yearly Average</label>
                 </div>
             </div>
 
@@ -182,15 +190,15 @@
                     <option value="0.8">80%</option>
                     <option value="1">100%</option>
                 </select>
-                <label>Select Average New Customer Retention Rate</label>
+                <label>Select Average Customer Retention Rate</label>
             </div>
 
             <div class="input-field col s12">
                 <select id="plan">
                     <option value="" disabled selected>Select an Option</option>
                     <option value="0.1">Basic</option>
-                    <option value="0.2">General</option>
-                    <option value="0.4">Advanced</option>
+                    <option value="0.2">Standard</option>
+                    <option value="0.4">VIP</option>
                 </select>
                 <label>Select Subscription Type</label>
             </div>
