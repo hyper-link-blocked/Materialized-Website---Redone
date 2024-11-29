@@ -49,7 +49,7 @@
             let sub = 0;
             let date = new Date().getFullYear();
             
-            if (customers < 0 || isNaN(customers) || start > date || isNaN(start)) {
+            if (customers < 0 || isNaN(customers) || start > date || isNaN(start) || plan == 5 || retention == 5) {
                 alert("Please enter valid answers into the prompts");
                 return;
             } else {
@@ -181,7 +181,7 @@
 
             <div class="input-field col s12">
                 <select id="retention">
-                    <option value="" disabled selected>Select an Option</option>
+                    <option value="5" disabled selected>Select an Option</option>
                     <option value="0.05">5%</option>
                     <option value="0.1">10%</option>
                     <option value="0.2">20%</option>
@@ -195,7 +195,7 @@
 
             <div class="input-field col s12">
                 <select id="plan">
-                    <option value="" disabled selected>Select an Option</option>
+                    <option value="5" disabled selected>Select an Option</option>
                     <option value="0.1">Basic</option>
                     <option value="0.2">Standard</option>
                     <option value="0.4">VIP</option>
