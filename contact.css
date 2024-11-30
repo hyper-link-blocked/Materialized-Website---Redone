@@ -1,4 +1,13 @@
 .video-container {
-        margin: .25em;
+    margin: .25em;
+    border: 2px solid #f00;
+}
+
+#image_list {
+    display: none;
+}
+
+div.main p img {
+    width: 100%;
     border: 2px solid #f00;
 }

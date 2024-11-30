@@ -25,6 +25,20 @@
         $(document).ready(function() {
             $('.datepicker').datepicker();
         });
+
+    </script>
+
+    <script>
+        window.onload = function() {
+            let links = document.getElementById("image_list").getElementsByTagName("a");
+            let count = 0;
+            let timer = setInterval(function() {
+                count = (count + 1) % links.length;
+                document.getElementById("slideshowimage").src = links[count].href;
+                document.getElementById("caption").innerHTML = links[count].title;
+            }, 2000);
+        }
+
     </script>
 
 </head>
@@ -111,6 +125,22 @@
             </div>
         </div>
     </section>
+    <div class="container">
+        <div class="main row black" style="padding: .3em 1em 1em 1em">
+            <h1 class="center red accent-4 white-text">Places to Visit in Oxford</h1>
+            <!-- slideshow images -->
+            <ul id="image_list">
+                <li><a href="images/ConnorPic.jpg" title="Kitchen"></a></li>
+                <li><a href="images/Sensorama.png" title="Bar"></a></li>
+                <li><a href="images/AvaHeadshot.jpg" title="Sushi Chef"></a></li>
+                <li><a href="images/AspenMovieMap.jpg" title="Sushi Boat"></a></li>
+                <li><a href="images/JackHeadshot.jpg" title="Outside"></a></li>
+            </ul>
+            <!-- large image and caption -->
+            <h2 id="caption" class="center white-text">Kitchen</h2>
+            <p><img src="images/ConnorPic.jpg" alt="" id="slideshowimage"></p>
+            </div>
+    </div>
 
     <footer class="page-footer black">
         <div class="container">
@@ -146,4 +176,6 @@
         </div>
     </footer>
 
-</body></html>
+</body>
+
+</html>
