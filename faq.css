@@ -1,3 +1,44 @@
 /* .container {
     margin-bottom: 5em;
+} */
+
+#faqs p {
+    padding-left: 50px;
+}
+
+#faqs h5.plus, #faqs h5.minus {
+    padding-left: 50px;
+    line-height: 40px;
+}
+
+#faqs h5.plus {
+    background: url(/images/plus.png) no-repeat left center;
+    background-size: 30px;
+}
+
+#faqs h5.minus {
+    background: url(/images/minus.png) no-repeat left center;
+    background-size: 30px;
+}
+
+div.closed {
+    display: none;
+}
+
+div.open {
+    display: block;
+}
+
+div.closed p,
+div.open p {
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+h5.plus,
+h5.minus {
+    color: #db1000;
+    border: 1px solid white;
+    padding: 5px;
 }

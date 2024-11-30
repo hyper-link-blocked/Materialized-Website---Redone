@@ -27,13 +27,40 @@
         });
     </script>
 
+    <script>
+        function toggle() {
+            //toggle + and - symbols
+            if (this.getAttribute("class") == "plus") {
+                this.setAttribute("class", "minus");
+            } else {
+                this.setAttribute("class", "plus");
+            }
+            //toggle the open and close state of the answer section in the FAQ
+            if (this.nextElementSibling.getAttribute("class") == "closed") {
+                this.nextElementSibling.setAttribute("class", "open");
+            } else {
+                this.nextElementSibling.setAttribute("class", "closed");
+            }
+        }
+        window.onload = function() {
+            //Find all h5 tags in the HTML and store them in the h5s array variable.
+            let h5s = document.getElementById("faqs").getElementsByTagName("h5");
+            //Run a loop to check whether an h2 tag (i.e., a FAQ question) is clicked. If it is clicked, call the toggle function.
+            for (let i = 0; i < h5s.length; i++) {
+                h5s[i].onclick = toggle;
+            }
+        }
+    </script>
+
 </head>
 
 <body>
 
     <nav id="top">
         <div class="nav-wrapper black">
-            <a href="index.html" class="brand-logo"><p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p></a>
+            <a href="index.html" class="brand-logo">
+                <p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">HOME</a></li>
@@ -53,12 +80,12 @@
         <li><a class="white-text" href="contact.html">CONTACT</a></li>
     </ul>
     <section>
-    <div class="container black" style="padding: 0 1em 1px">
+        <div class="container black" style="padding: 0 1em 1px">
 
-        <h2 class="red-text text-accent-4 center-align">FAQ Questions</h2>
-        <p class="white-text center-align">Here's a database of some of our most common questions. <br>If you have a question that isn't listed here, feel free to contact us and ask!</p>
+            <h2 class="red-text text-accent-4 center-align">FAQ Questions</h2>
+            <p class="white-text center-align">Here's a database of some of our most common questions. <br>If you have a question that isn't listed here, feel free to contact us and ask!</p>
 
-    </div>
+        </div>
     </section>
 
     <div class="container">
@@ -94,13 +121,45 @@
         </div>
     </div>
 
-        <footer class="page-footer black">
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2 black">
+
+            <section id="faqs">
+
+                <h5 class="plus">What Is VR?</h5>
+                <div class="closed">
+                    <p>VR, or Virtual Reality, is a computer-simulated environment that allows users to move in and interact with different virtual objects through the use of controllers or hand tracking. Users can experience many different simulations and even program their own. Through the use of a headset with two screens in front of the eyes, users can see the simulation as if they were actively standing in it, making it feel like they're truly immersed in the virtual world.</p>
+                </div>
+                <h5 class="plus">What Are The Differences Between VR and AR?</h5>
+                <div class="closed">
+                    <p>VR and AR are similar, yet very different. AR, meaning Augmented Reality, uses only small virtual elements to enhance the user's experiences, allowing them to interact with both real and virtual objects. A good example of AR is the Apple Vision Pro. While it looks like a standard VR headset, it has a clear front display and projectors built in that display virtual menus onto the glass, allowing users to see both the real world and virtual objects.</p>
+                </div>
+                <h5 class="plus">Are There Any Safety Issues?</h5>
+                <div class="closed">
+                    <p>There are a fair amount of safety and/or health concerns with VR. The most prominent one is physical harm. When you can't see your surroundings in the real world, you're bound to hit something. Other concerns are eye strain and motion sickness, as well as more psychological risks like stress or fear that could be caused by certain simulations.</p>
+                </div>
+                <h5 class="plus">Is VR Only For Gaming?</h5>
+                <div class="closed">
+                    <p>Not at all. VR has many applications outside of the video game industry. Many hospitals use virtual reality to train staff, as well as help patients relax. It's also used in the automotive industry to build engines in VR, so you can learn how they work. Many different industries use virtual reality in order to either accelerate their processes or to do things that previously weren't possible.<br><br>
+                                (Take a look at what <a href="https://historicvr.com">Historic VR</a> has done with the medium).</p>
+                </div>
+                <h5 class="plus">What Are The Benefits Of VR?</h5>
+                <div class="closed">
+                    <p>There are many different benefits to VR. They range from improved collaboration and learning to more cost-effective methods and higher training retention. Its most effective field is training people to do complicated or expensive tasks, where they can simulate different scenarios for far less money in a virtual space instead of the real world.</p>
+                </div>
+            </section>
+            </div>
+        </div>
+    </div>
+
+    <footer class="page-footer black">
         <div class="container">
             <div class="row">
                 <div class="col l6 s12 red accent-4">
                     <ul class="collection with-header">
                         <li class="collection-header black">
-                           <!-- I used collections as my CSS component-->
+                            <!-- I used collections as my CSS component-->
                             <h4 class="red-text text-accent-4">Contributors</h4>
                         </li>
                         <li class="collection-item black">Brown, Conner</li>
@@ -115,7 +174,7 @@
                     <h5 class="red-text text-accent-4">Tired of Scrolling?</h5>
                     <ul>
                         <li><a class="white-text" href="#top">Back to Top</a></li>
-            
+
                     </ul>
                 </div>
             </div>
