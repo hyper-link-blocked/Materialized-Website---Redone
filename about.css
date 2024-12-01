@@ -9,6 +9,11 @@
     border-top: none;
 }
 
-.card {
+.card, #largeimage, #gallaryimages li a img {
     border: 2px solid #db1000;
+}
+
+div#gallery li {
+ padding-right: 10px;
+ display: inline;
 }

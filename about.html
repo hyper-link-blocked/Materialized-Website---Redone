@@ -23,13 +23,40 @@
         });
     </script>
 
+    <script>
+        function swap(evt) {
+            // Replace the current large image with the image from the clicked thumbnail.
+            document.getElementById("largeimage").src = this.getAttribute("href")
+            //document.getElementById("image").setAttribute("src", this.getAttribute("href")
+            // Replace the current caption with the title from the clicked thumbnail.
+            document.getElementById("caption").innerHTML = this.getAttribute("title");
+            //Cancel the default action of a click event for hyperlinked items.
+            //if(!evt) {evt=window.event;}
+            if (evt.preventDefault) {
+                evt.preventDefault();
+            } else {
+                evt.returnValue = false;
+            }
+        }
+        window.onload = function() {
+            // Find all a tags in the HTML and store them in the images array variable.
+            let images = document.getElementById("gallaryimages").getElementsByTagName("a");
+            //Run a loop to check whether a <a> tag (i.e., a thumbnail image) is clicked. If it is clicked, call the swap function.
+            for (let i = 0; i < images.length; i++) {
+                images[i].onclick = swap;
+            }
+        }
+    </script>
+
 </head>
 
 <body>
 
     <nav id="top">
         <div class="nav-wrapper black">
-            <a href="index.html" class="brand-logo"><p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p></a>
+            <a href="index.html" class="brand-logo">
+                <p class="flow-text" style="margin: 0">Miami <span class="red-text text-accent-4">Mindscape</span></p>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">HOME</a></li>
@@ -49,19 +76,19 @@
         <li><a class="white-text" href="contact.html">CONTACT</a></li>
     </ul>
     <section>
-    <div class="container black" style="padding: 0 1em 1px">
-        <h1 class="red-text text-accent-4 center">About Us</h1>
-              <p class="white-text center-align">We're a Virtual Reality company based out of Oxford, Ohio. We provide information and answers to questions people might have about Virtual Reality as a whole. <br>Our main goal is to help people understand the concept of VR and make it easier to use so that it becomes even more mainstream than it already is!</p>
-    </div>
+        <div class="container black" style="padding: 0 1em 1px">
+            <h1 class="red-text text-accent-4 center">About Us</h1>
+            <p class="white-text center-align">We're a Virtual Reality company based out of Oxford, Ohio. We provide information and answers to questions people might have about Virtual Reality as a whole. <br>Our main goal is to help people understand the concept of VR and make it easier to use so that it becomes even more mainstream than it already is!</p>
+        </div>
     </section>
 
-    
-       
-      
-        <h1 class="center">Meet The Team</h1>
-                  <p class="red-text text-accent-4 center-align" style="padding: 2em">Our entire team is dedicated to our goal of making VR more accessible. <br>Below, you'll find a picture of them, and a short introduction from each telling you who they are.</p>
 
-    
+
+
+    <h1 class="center">Meet The Team</h1>
+    <p class="red-text text-accent-4 center-align" style="padding: 2em">Our entire team is dedicated to our goal of making VR more accessible. <br>Below, you'll find a picture of them, and a short introduction from each telling you who they are.</p>
+
+
 
     <div class="container">
         <div class="row">
@@ -72,7 +99,7 @@
                     </div>
                     <div class="card-content black">
                         <span class="card-title activator white-text center red accent-4">Connor</span>
-                    
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Connor Brown<i class="material-icons right">close</i></span>
@@ -87,7 +114,7 @@
                     </div>
                     <div class="card-content black">
                         <span class="card-title activator white-text center red accent-4">Zack</span>
-                        
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Zack Dean<i class="material-icons right">close</i></span>
@@ -102,7 +129,7 @@
                     </div>
                     <div class="card-content black">
                         <span class="card-title activator white-text center red accent-4">Jack</span>
-                        
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Jack Kesterson<i class="material-icons right">close</i></span>
@@ -117,11 +144,11 @@
                     </div>
                     <div class="card-content black">
                         <span class="card-title activator white-text center red accent-4">Ava</span>
-                        
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Ava Shannon<i class="material-icons right">close</i></span>
-                        <p class="white-text">Hi! I am Ava Shannon and I am 20 years old,  <br>and I am from Cleveland, Ohio. I am sophomore <br>at Miami University and am majoring in <br>Emereging Technology in Business And<br> Design, with a minor in Supply Chain <br>Management.</p>
+                        <p class="white-text">Hi! I am Ava Shannon and I am 20 years old, <br>and I am from Cleveland, Ohio. I am sophomore <br>at Miami University and am majoring in <br>Emereging Technology in Business And<br> Design, with a minor in Supply Chain <br>Management.</p>
                     </div>
                 </div>
             </div>
@@ -132,11 +159,11 @@
                     </div>
                     <div class="card-content black">
                         <span class="card-title activator white-text center red accent-4">Ethan</span>
-                        
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Ethan Stout<i class="material-icons right">close</i></span>
-                        <p class="white-text">Hi!  My name is Ethan and my pronouns are they/them. <br> I am a first year at Miami Univeristy and my major is Games and Simulation.<br>I plan to spend my time at Maimi trying to learn as much as I can about game developement and production and use that knowldege to create games that can recreate the fond memories of gamimg I had when I was younger for others.<br> Its also just a good blend og my hobbies.</p>
+                        <p class="white-text">Hi! My name is Ethan and my pronouns are they/them. <br> I am a first year at Miami Univeristy and my major is Games and Simulation.<br>I plan to spend my time at Maimi trying to learn as much as I can about game developement and production and use that knowldege to create games that can recreate the fond memories of gamimg I had when I was younger for others.<br> Its also just a good blend og my hobbies.</p>
                     </div>
                 </div>
             </div>
@@ -147,7 +174,7 @@
                     </div>
                     <div class="card-content">
                         <span class="card-title activator white-text center red accent-4">Elijah</span>
-                        
+
                     </div>
                     <div class="card-reveal black">
                         <span class="card-title white-text">Elijah Phipps<i class="material-icons right">close</i></span>
@@ -157,6 +184,33 @@
                             Outside of academics, I'm quite fond of photography, the occasional long-form hike, playing an absurd amount of board games, and writing unnecessarily long introductions.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div id="gallery" class="row">
+            <div class="col s8 offset-s2 center">
+                <h1>Gallery</h1>
+                <ul id="gallaryimages">
+                    <!-- list of thumbnail images -->
+                    <li><a href="images/ConnorPic.jpg" title="Connor Brown" id="first_link">
+                            <img src="images/ConnorPic.jpg" width=60px height=60px alt=""></a></li>
+                    <li><a href="images/Zackpicture.jpg" title="Zack Dean">
+                            <img src="images/Zackpicture.jpg" width=60px height=60px alt=""></a></li>
+                    <li><a href="images/JackHeadshot.jpg" title="Jack Kesterson">
+                            <img src="images/JackHeadshot.jpg" width=60px height=60px alt=""></a></li>
+                    <li><a href="images/AvaHeadshot.jpg" title="Ava Shannon">
+                            <img src="images/AvaHeadshot.jpg" width=60px height=60px alt=""></a></li>
+                    <li><a href="images/TheOneGoodPictureOfMyselfIKindOfLike.jpg" title="Ethan Stout">
+                            <img src="images/TheOneGoodPictureOfMyselfIKindOfLike.jpg" width=60px height=60px alt=""></a></li>
+                    <li><a href="images/ElijahHeadshot.png" title="Elijah Phipps">
+                            <img src="images/ElijahHeadshot.png" width=60px height=60px alt=""></a><p></p></li>
+                </ul>
+                <!-- large image and its caption -->
+                <h2 id="caption">Connor Brown</h2>
+                <p><img src="images/ConnorPic.jpg" width=500px height=500px alt="" id="largeimage"></p>
             </div>
         </div>
     </div>
@@ -171,7 +225,7 @@
                 <div class="col l6 s12 red accent-4">
                     <ul class="collection with-header">
                         <li class="collection-header black">
-                           <!-- I used collections as my CSS component-->
+                            <!-- I used collections as my CSS component-->
                             <h4 class="red-text text-accent-4">Contributors</h4>
                         </li>
                         <li class="collection-item black">Brown, Conner</li>
@@ -186,7 +240,7 @@
                     <h5 class="red-text text-accent-4">Tired of Scrolling?</h5>
                     <ul>
                         <li><a class="white-text" href="#top">Back to Top</a></li>
-            
+
                     </ul>
                 </div>
             </div>
