@@ -2,23 +2,27 @@
     margin-bottom: 5em;
 } */
 
-#faqs p {
+/*#faqs p {
     padding-left: 50px;
-}
+}*/
 
-#faqs h5.plus, #faqs h5.minus {
-    padding-left: 50px;
-    line-height: 40px;
-}
+
 
 #faqs h5.plus {
     background: url(/images/plus.png) no-repeat left center;
     background-size: 30px;
+    padding: .5em;
 }
 
 #faqs h5.minus {
     background: url(/images/minus.png) no-repeat left center;
     background-size: 30px;
+    padding: .5em;
+}
+
+#faqs h5.plus, #faqs h5.minus {
+    padding-left: 40px;
+    /*line-height: 40px;*/
 }
 
 div.closed {
