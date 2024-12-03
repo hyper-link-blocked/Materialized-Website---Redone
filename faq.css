@@ -9,13 +9,13 @@
 
 
 #faqs h5.plus {
-    background: url(/images/plus.png) no-repeat left center;
+    background: url(/plus.png) no-repeat left center;
     background-size: 30px;
     padding: .5em;
 }
 
 #faqs h5.minus {
-    background: url(/images/minus.png) no-repeat left center;
+    background: url(minus.png) no-repeat left center;
     background-size: 30px;
     padding: .5em;
 }
