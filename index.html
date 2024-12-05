@@ -165,10 +165,14 @@
     </section>
     <section>
         <div class="container">
+           <div class="row">
+           <div class="col s12">
+               <h1 class="center">How can WE Help YOU?</h1>
+           </div>
             <div class="input-field col s12">
                 <div class="input-field col s12">
                     <input id="customers" type="text">
-                    <label for="email">Enter New Customer Yearly Average</label>
+                    <label for="email">Enter Number of New Customers seen per Year</label>
                 </div>
             </div>
 
@@ -192,6 +196,7 @@
                 </select>
                 <label>Select Average Customer Retention Rate</label>
             </div>
+            </div>
 
             <div class="input-field col s12">
                 <select id="plan">
@@ -202,6 +207,8 @@
                 </select>
                 <label>Select Subscription Type</label>
             </div>
+            
+            <input class="red accent-4 white-text" type="button" id="calculate" value="Calculate" onclick="calculate()">
 
             <div class="row">
                 <form class="col s12">
@@ -213,8 +220,6 @@
                     </div>
                 </form>
             </div>
-
-            <input type="button" id="calculate" value="Calculate" onclick="calculate()">
 
         </div>
     </section>
