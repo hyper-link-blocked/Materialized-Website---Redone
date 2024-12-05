@@ -6,6 +6,11 @@
     padding-left: 50px;
 }*/
 
+#faqs h5.minus {
+    background: url(minus.png) no-repeat left center;
+    background-size: 30px;
+    padding: .5em;
+}
 
 
 #faqs h5.plus {
@@ -14,11 +19,7 @@
     padding: .5em;
 }
 
-#faqs h5.minus {
-    background: url(minus.png) no-repeat left center;
-    background-size: 30px;
-    padding: .5em;
-}
+
 
 #faqs h5.plus, #faqs h5.minus {
     padding-left: 40px;
