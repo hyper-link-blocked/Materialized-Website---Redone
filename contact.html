@@ -25,7 +25,6 @@
         $(document).ready(function() {
             $('.datepicker').datepicker();
         });
-
     </script>
 
     <script>
@@ -38,7 +37,6 @@
                 document.getElementById("caption").innerHTML = links[count].title;
             }, 2000);
         }
-
     </script>
 
 </head>
@@ -126,20 +124,22 @@
         </div>
     </section>
     <div class="container">
-        <div class="main row black" style="padding: .3em 1em 1em 1em">
-            <h1 class="center red accent-4 white-text">Places to Visit in Oxford</h1>
-            <!-- slideshow images -->
-            <ul id="image_list">
-                <li><a href="images/slideFall.png" title="A joy to experience in autumn"></a></li>
-                <li><a href="images/slideSundial.jpg" title="Visit the Sundial for good luck"></a></li>
-                <li><a href="images/slideArch.png" title="Try for true love under Upham Arch"></a></li>
-                <li><a href="images/slideUptown.png" title="Check out Uptown"></a></li>
-                <li><a href="images/slideSeal.png" title="Don't step on the Seal!"></a></li>
-            </ul>
-            <!-- large image and caption -->
-            <h2 id="caption" class="center white-text">A joy to experience in autumn</h2>
-            <p><img src="images/slideFall.png" alt="" id="slideshowimage"></p>
+        <div class="main row">
+            <div class="col s12 black">
+                <h1 class="center red accent-4 white-text" style="padding-bottom: .2em">Other things to do at Miami</h1>
+                <!-- slideshow images -->
+                <ul id="image_list">
+                    <li><a href="images/slideFall.png" title="A joy to experience in autumn"></a></li>
+                    <li><a href="images/slideSundial.png" title="Visit the Sundial for good luck"></a></li>
+                    <li><a href="images/slideArch.png" title="Try for true love under Upham Arch"></a></li>
+                    <li><a href="images/slideUptown.png" title="Check out Uptown"></a></li>
+                    <li><a href="images/slideSeal.png" title="Don't step on the Seal!"></a></li>
+                </ul>
+                <!-- large image and caption -->
+                <h2 id="caption" class="center white-text">A joy to experience in autumn</h2>
+                <p><img src="images/slideFall.png" alt="" id="slideshowimage"></p>
             </div>
+        </div>
     </div>
 
     <footer class="page-footer black" style="padding: 0">
@@ -148,18 +148,18 @@
                 <div class="col l6 s6 red accent-4">
                     <ul class="collection with-header">
                         <li class="collection-header black">
-                           <!-- I used collections as my CSS component-->
+                            <!-- I used collections as my CSS component-->
                             <h4 class="red-text text-accent-4 center" style="margin: 0.3em">Contributors</h4>
                         </li>
                         <li class="collection-item black center"><a class="white-text" href="about.html">Our Amazing Team</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="col l4 offset-l2">
                     <h5 class="red-text text-accent-4">Tired of Scrolling?</h5>
                     <ul>
                         <li><a class="white-text" href="#top">Back to Top</a></li>
-            
+
                     </ul>
                 </div>
             </div>
@@ -172,6 +172,4 @@
         </div>
     </footer>
 
-</body>
-
-</html>
+</body></html>
